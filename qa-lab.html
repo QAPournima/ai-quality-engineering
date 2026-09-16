@@ -35,64 +35,99 @@
       <p class="kicker">Office 1</p>
       <h1 class="section-title">Quality Engineering Lab</h1>
       <p class="section-sub">Systems, not just tools. AI agents, web, mobile, API, observability and CI — the same loop used on Messaging, Mobile and canaries at Aircall.</p>
-      <div class="desk">
-        <div class="screen">
+      <p class="keys">Click a monitor or the phone. The cards below are the same information, without the bench.</p>
+      <div class="desk" role="group" aria-label="Lab bench">
+        <button type="button" class="screen hotspot" data-open="agent" aria-controls="lab-inspect" aria-expanded="false">
           <h3>AI QA AGENT</h3>
-          Jira requirement<br />
-          ↓<br />
-          AI reasoning<br />
-          ↓<br />
-          Test generation<br />
-          ↓<br />
-          Playwright / Maestro<br />
-          ↓<br />
-          Evidence<br />
-          ↓<br />
-          AI investigation<br />
-          ↓<br />
-          Slack / Jira
-        </div>
-        <div class="screen" id="synth-monitor">
+          <ol class="flow" aria-label="AI QA workflow">
+            <li data-step>Jira requirement</li>
+            <li data-step>AI analysis</li>
+            <li data-step>Test planning</li>
+            <li data-step>Playwright / Maestro</li>
+            <li data-step>Evidence</li>
+            <li data-step>Failure analysis</li>
+            <li data-step>Slack / Jira</li>
+          </ol>
+          <span class="hint">Open station</span>
+        </button>
+        <button type="button" class="screen hotspot" id="observability" data-open="synth" aria-controls="lab-inspect" aria-expanded="false">
           <h3>SYNTHETIC MONITORING</h3>
-          ● Production<br />
-          ● Staging<br /><br />
-          <span class="run">Running…</span><br />
-          <span class="run">Running…</span><br />
-          <span class="run">Running…</span><br /><br />
-          <span class="ok">✓ Workflow healthy</span><br /><br />
-          Datadog → Slack → AI investigation
-        </div>
-        <div class="phone">
-          <span>📱</span>
+          <p class="env"><span class="dot"></span> Staging · healthy</p>
+          <p class="env"><span class="dot"></span> Production · healthy</p>
+          <p><span class="run">Running…</span></p>
+          <p><span class="run">Running…</span></p>
+          <p class="ok">Workflow healthy</p>
+          <p>Datadog → Slack → investigation</p>
+          <span class="hint">Open station</span>
+        </button>
+        <button type="button" class="phone hotspot" data-open="mobile" aria-controls="lab-inspect" aria-expanded="false">
+          <span class="notch" aria-hidden="true"></span>
           <b>Mobile</b>
           Maestro<br />
           Appium<br />
           iOS / Android
-        </div>
+          <span class="hint">Open</span>
+        </button>
       </div>
+      <section id="lab-inspect" class="inspect" hidden>
+        <div class="inspect-bar">
+          <h2 data-inspect-title>Station</h2>
+          <button type="button" class="hud-toggle" data-inspect-close>Close</button>
+        </div>
+        <article data-panel="agent">
+          <p>AIQA Messaging Test and the AI E2E platform: Jira → reasoning → browser → evidence → failure analysis.</p>
+          <pre class="terminal">$ agent --from jira
+&gt; Requirement received
+<span class="ai">AI: analyse, plan, then execute in the browser.</span>
+<span class="ok">Evidence captured</span>
+<span class="ok">Failure analysis attached</span>
+<span class="ok">Slack / Jira notified</span></pre>
+          <p>The engineer stays the decision-maker. Traditional E2E asks people to hand-translate requirements into brittle scripts; this loop keeps requirements in and evidence out.</p>
+          <p class="inspect-links">
+            <a class="btn btn-primary" href="./projects/ai-qa.html">Open AI QA case study</a>
+          </p>
+        </article>
+        <article data-panel="synth" hidden>
+          <p>Shared Datadog synthetic canaries every 2–3 minutes, 24/7, Slack alerts, Claude as first-level investigation.</p>
+          <p>Synthetic tests run continuously on critical E2E workflows. A failure surfaces in Datadog, alerts Slack, then investigation — so issues appear before customers report them.</p>
+          <p>Canaries sit with GitLab CI, Docker and failure evidence — so issues surface before customers report them.</p>
+        </article>
+        <article data-panel="mobile" hidden>
+          <p>Appium and Maestro on iOS/Android, used on Aircall Workspace on Mobile, Voicemail Drop and WhatsApp Business.</p>
+          <ol class="flow static">
+            <li>iOS / Android</li>
+            <li>Maestro / Appium</li>
+            <li>CI/CD</li>
+            <li>Test results</li>
+          </ol>
+          <p class="inspect-links">
+            <a class="btn btn-ghost" href="https://github.com/QAPournima/QAAutomationTest_Mobile">Mobile automation on GitHub</a>
+          </p>
+        </article>
+      </section>
       <div class="stations">
         <a class="card" href="./projects/ai-qa.html">
-          <h3>🤖 AI QA</h3>
+          <h3>AI QA</h3>
           <p>AIQA Messaging Test and the AI E2E platform: Jira → reasoning → browser → evidence → failure analysis.</p>
         </a>
         <a class="card" href="https://github.com/QAPournima/QAAutomationTest_Mobile">
-          <h3>📱 Mobile</h3>
+          <h3>Mobile</h3>
           <p>Appium and Maestro on iOS/Android, used on Aircall Workspace on Mobile, Voicemail Drop and WhatsApp Business.</p>
         </a>
         <a class="card" href="https://github.com/QAPournima/playwrightWithJavascript">
-          <h3>🌐 Web</h3>
+          <h3>Web</h3>
           <p>Playwright plus AI-assisted workflows that turn requirements into executable browser scenarios.</p>
         </a>
         <a class="card" href="https://github.com/QAPournima/QAAutomation">
-          <h3>🔌 API</h3>
+          <h3>API</h3>
           <p>REST-assured, Postman, SQL and MongoDB — backend contracts as part of the same quality loop.</p>
         </a>
-        <article class="card" id="observability">
-          <h3>📡 Observability</h3>
+        <article class="card">
+          <h3>Observability</h3>
           <p>Shared Datadog synthetic canaries every 2–3 minutes, 24/7, Slack alerts, Claude as first-level investigation.</p>
         </article>
         <article class="card">
-          <h3>⚙️ Performance &amp; CI</h3>
+          <h3>Performance and CI</h3>
           <p>Canaries, GitLab CI, Docker and failure evidence — so issues surface before customers report them.</p>
         </article>
       </div>
@@ -104,5 +139,6 @@
     </aside>
   </div>
   <script src="./js/hq.js"></script>
+  <script src="./js/lab.js"></script>
 </body>
 </html>

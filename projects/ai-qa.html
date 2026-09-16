@@ -3,78 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI QA Test Agent | Pournima Tele</title>
+  <title>AI QA Test Agent | Pournima HQ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
-<body>
-  <header class="nav">
-    <div class="wrap nav-inner">
-      <a class="brand" href="../index.html">Pournima <span>Tele</span></a>
-      <nav class="nav-links">
-        <a href="../index.html#projects">Projects</a>
-        <a href="../index.html#lab">AI Lab</a>
-        <a href="../work.html">Experience</a>
-      </nav>
-      <a class="btn btn-ghost" href="https://github.com/QAPournima/Zap-Prototype">GitHub</a>
-    </div>
-  </header>
-  <main class="wrap case" style="padding-top:40px;padding-bottom:64px">
-    <p class="kicker">Case study</p>
-    <h2>AI QA Test Agent</h2>
-    <p class="lede">Requirement-driven testing: Jira → AI reasoning → browser interaction → evidence → failure analysis.</p>
-    <img src="../assets/ai-testing-platform.png" alt="AI Testing Automation Platform" style="border-radius:16px;margin:24px 0;max-height:280px;width:100%;object-fit:cover" />
-
-    <div class="grid-2">
-      <article class="panel">
-        <h3>Problem</h3>
-        <p>Traditional E2E automation asks engineers to manually translate requirements into test scenarios and then maintain brittle scripts as the product moves.</p>
-      </article>
-      <article class="panel">
-        <h3>Approach</h3>
-        <p class="flow" style="margin-top:10px">
-          <span class="node">Jira</span>
-          <span class="down">↓</span>
-          <span class="node">AI reasoning</span>
-          <span class="down">↓</span>
-          <span class="node">Browser interaction</span>
-          <span class="down">↓</span>
-          <span class="node">Evidence</span>
-          <span class="down">↓</span>
-          <span class="node">Failure analysis</span>
-        </p>
-      </article>
-    </div>
-
-    <article class="panel" style="margin-top:16px">
-      <h3>Stack</h3>
-      <div class="tags" style="margin-top:10px">
-        <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">FastAPI / Flask</span>
-        <span class="tag">Python</span><span class="tag">Playwright</span><span class="tag">PostgreSQL</span>
-        <span class="tag">Docker</span><span class="tag">LLMs</span>
+<body data-room="fame">
+  <div class="floor">
+    <header class="nav">
+      <div class="wrap nav-inner">
+        <a class="brand" href="../index.html">Pournima <span>HQ</span></a>
+        <nav class="nav-links">
+          <a href="../index.html">Lobby</a>
+          <a href="../qa-lab.html">QA Lab</a>
+          <a href="../dev-studio.html">Dev Studio</a>
+          <a href="../office.html">My Office</a>
+          <a class="active" href="../fame.html">Wall of Fame</a>
+        </nav>
       </div>
-    </article>
+    </header>
+    <main class="wrap room case">
+      <p class="kicker">Wall of Fame · Case study</p>
+      <h1 class="section-title">AI QA Test Agent</h1>
+      <p class="section-sub">Requirement-driven testing: Jira → AI reasoning → browser interaction → evidence → failure analysis.</p>
+      <pre class="terminal" style="margin-top:22px">╭──────────────────────────────────────╮
+│ ~/pournima/ai-qa                     │
+│                                      │
+│ <span class="bar">$ open case-study --project ai-qa</span>    │
+│                                      │
+│ <span class="prompt">Requirement → AI analysis</span>            │
+│ <span class="prompt">Build → Test → Observe → Improve</span>     │
+│                                      │
+│ <span class="ok">✓ Browser evidence captured</span>          │
+│ <span class="ok">✓ Failure analysis attached</span>          │
+│ <span class="ok">✓ Slack / Jira notified</span>              │
+╰──────────────────────────────────────╯</pre>
+      <img src="../assets/ai-testing-platform.png" alt="AI Testing Automation Platform" style="border-radius:16px;margin:24px 0;max-height:280px;width:100%;object-fit:cover" />
 
-    <article class="panel" style="margin-top:16px">
-      <h3>Capabilities</h3>
-      <ul>
-        <li>Requirement-driven test generation</li>
-        <li>Browser automation</li>
-        <li>AI-assisted failure investigation</li>
-        <li>Screenshots / video / HTML evidence</li>
-        <li>Jira integration</li>
-        <li>Slack reporting</li>
-        <li>Mobile test execution</li>
-        <li>Performance testing</li>
-        <li>Network throttling</li>
-        <li>Call-flow automation</li>
-      </ul>
-    </article>
-    <p style="margin-top:24px">
-      <a class="btn btn-primary" href="https://github.com/QAPournima/Zap-Prototype">View Zap-Prototype on GitHub</a>
-      <a class="btn btn-ghost" href="../index.html#projects">Back to projects</a>
-    </p>
-  </main>
+      <div class="grid-2">
+        <article class="panel">
+          <h3>Problem</h3>
+          <p>Traditional E2E automation asks engineers to manually translate requirements into test scenarios and then maintain brittle scripts as the product moves.</p>
+        </article>
+        <article class="panel">
+          <h3>Approach</h3>
+          <p>Jira in. AI reasoning, browser interaction, evidence and failure analysis out. The engineer stays the decision-maker.</p>
+        </article>
+      </div>
+
+      <article class="panel" style="margin-top:16px">
+        <h3>Stack</h3>
+        <div class="tags" style="margin-top:10px">
+          <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">FastAPI / Flask</span>
+          <span class="tag">Python</span><span class="tag">Playwright</span><span class="tag">PostgreSQL</span>
+          <span class="tag">Docker</span><span class="tag">LLMs</span>
+        </div>
+      </article>
+
+      <article class="panel" style="margin-top:16px">
+        <h3>Capabilities</h3>
+        <ul>
+          <li>Requirement-driven test generation</li>
+          <li>Browser automation</li>
+          <li>AI-assisted failure investigation</li>
+          <li>Screenshots / video / HTML evidence</li>
+          <li>Jira integration</li>
+          <li>Slack reporting</li>
+          <li>Mobile test execution</li>
+          <li>Performance testing</li>
+          <li>Network throttling</li>
+          <li>Call-flow automation</li>
+        </ul>
+      </article>
+      <p style="margin-top:24px">
+        <a class="btn btn-primary" href="https://github.com/QAPournima/Zap-Prototype">View Zap-Prototype on GitHub</a>
+        <a class="btn btn-ghost" href="../fame.html">Back to Wall of Fame</a>
+      </p>
+    </main>
+    <aside class="guide" aria-live="polite">
+      <div class="bot" aria-hidden="true">🤖</div>
+      <p class="bubble" data-guide-text></p>
+    </aside>
+  </div>
+  <script src="../guide.js"></script>
 </body>
 </html>

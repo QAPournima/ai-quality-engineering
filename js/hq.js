@@ -45,7 +45,7 @@
   });
 
   var lines = {
-    lobby: "Welcome to Pournima HQ. Pick a door — or skip straight to a room.",
+    lobby: "This is the HQ floor. Click a room — the write-up lives inside.",
     lab: "Want to see how my AI-powered QA workflow works?",
     dev: "This is where I experiment with AI-assisted development.",
     office: "Here is my engineering journey — desk, wall, and bookshelf.",
@@ -85,6 +85,14 @@
       building.style.transform = "translate(" + x + "px," + y + "px)";
     });
   }
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest("[data-skip-world]")) return;
+    var map = document.getElementById("html-map");
+    if (map && !document.body.classList.contains("world-on")) {
+      map.scrollIntoView({ block: "start" });
+    }
+  });
 
   document.addEventListener("keydown", function (e) {
     if (e.metaKey || e.ctrlKey || e.altKey) return;

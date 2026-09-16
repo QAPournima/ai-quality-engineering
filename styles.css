@@ -155,7 +155,72 @@ img { max-width: 100%; display: block; }
 }
 .btn-primary { background: var(--tone); color: #111; }
 .btn-ghost { border-color: var(--line); }
-.lobby { padding: 56px 0 80px; text-align: center; }
+.lobby-main { position: relative; z-index: 1; }
+.intro { padding: 28px 0 12px; text-align: center; }
+.lobby-note { text-align: center; margin: 8px 0 40px; }
+#world-stage {
+  position: relative;
+  height: calc(100vh - 58px);
+  min-height: 540px;
+  background: #0b0d12;
+}
+#hq-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.world-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+.world-labels button {
+  pointer-events: auto;
+  position: absolute;
+  transform: translate(-50%, -120%);
+  background: rgba(11, 13, 18, 0.82);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font: 700 12px/1 "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+body.world-on .floor {
+  background: #0b0d12;
+}
+body.world-on .floor::before {
+  display: none;
+}
+body.world-on .intro {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 8px;
+  z-index: 6;
+  padding-top: 8px;
+  pointer-events: none;
+}
+body.world-on .intro h1 {
+  font-size: clamp(22px, 3.6vw, 40px);
+}
+body.world-on .intro .lede {
+  margin-top: 8px;
+  font-size: 15px;
+}
+body.world-on .intro .cta,
+body.world-on .intro .keys {
+  pointer-events: auto;
+}
+button.btn {
+  font: 700 13px/1 "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  cursor: pointer;
+  background: transparent;
+  color: inherit;
+}
 .kicker {
   margin: 0 0 10px;
   font-family: "JetBrains Mono", ui-monospace, monospace;

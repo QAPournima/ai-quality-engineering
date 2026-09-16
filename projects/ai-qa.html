@@ -8,21 +8,30 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css" />
 </head>
-<body data-room="fame">
+<body data-room="fame" data-root="../">
+  <a class="skip" href="#main">Skip to content</a>
   <div class="floor">
-    <header class="nav">
-      <div class="wrap nav-inner">
+    <header class="nav hud">
+      <div class="wrap hud-inner">
         <a class="brand" href="../index.html">Pournima <span>HQ</span></a>
-        <nav class="nav-links">
-          <a href="../index.html">Lobby</a>
-          <a href="../qa-lab.html">QA Lab</a>
-          <a href="../dev-studio.html">Dev Studio</a>
-          <a href="../office.html">My Office</a>
-          <a class="active" href="../fame.html">Wall of Fame</a>
+        <nav class="nav-links" aria-label="Headquarters">
+          <a href="../index.html" title="Keyboard 1">HQ</a>
+          <a href="../qa-lab.html" title="Keyboard 2">QA Lab</a>
+          <a href="../dev-studio.html" title="Keyboard 3">Dev Studio</a>
+          <a href="../office.html" title="Keyboard 4">Office</a>
+          <a class="active" href="../fame.html" title="Keyboard 5">Wall of Fame</a>
         </nav>
+        <p class="hud-status" aria-label="Engineering focus: quality, development, AI, observability">
+          <span class="on">AI online</span>
+          <span>QA</span>
+          <span>Dev</span>
+          <span>AI</span>
+          <span>Observe</span>
+        </p>
+        <button type="button" class="hud-toggle" data-motion-toggle aria-pressed="false">Reduce motion</button>
       </div>
     </header>
-    <main class="wrap room case">
+    <main id="main" class="wrap room case" tabindex="-1">
       <p class="kicker">Wall of Fame · Case study</p>
       <h1 class="section-title">AI QA Test Agent</h1>
       <p class="section-sub">Requirement-driven testing: Jira → AI reasoning → browser interaction → evidence → failure analysis.</p>
@@ -81,10 +90,11 @@
       </p>
     </main>
     <aside class="guide" aria-live="polite">
-      <div class="bot" aria-hidden="true">🤖</div>
+      <div class="bot" aria-hidden="true">AI</div>
       <p class="bubble" data-guide-text></p>
+      <button type="button" class="guide-close" data-guide-close aria-label="Dismiss guide">×</button>
     </aside>
   </div>
-  <script src="../guide.js"></script>
+  <script src="../js/hq.js"></script>
 </body>
 </html>

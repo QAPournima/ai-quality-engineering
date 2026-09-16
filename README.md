@@ -1,13 +1,10 @@
 # Pournima HQ
 
-Virtual engineering office for Quality Engineering × Software Engineering × AI.
+Virtual engineering office for AI × Software Engineering × Quality Engineering.
 
-Rooms:
+Rooms: [QA Lab](./qa-lab.html) · [Dev Studio](./dev-studio.html) · [Office](./office.html) · [Wall of Fame](./fame.html)
 
-- [QA Lab](./qa-lab.html)
-- [Dev Studio](./dev-studio.html)
-- [My Office](./office.html)
-- [Wall of Fame](./fame.html)
+HUD is always available. Keys `1`–`5` jump rooms. Reduce motion is in the header.
 
 Live: [qapournima.github.io/ai-quality-engineering](https://qapournima.github.io/ai-quality-engineering/)
 

@@ -8,21 +8,30 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body data-room="office">
+<body data-room="office" data-root="./">
+  <a class="skip" href="#main">Skip to content</a>
   <div class="floor">
-    <header class="nav">
-      <div class="wrap nav-inner">
+    <header class="nav hud">
+      <div class="wrap hud-inner">
         <a class="brand" href="./index.html">Pournima <span>HQ</span></a>
-        <nav class="nav-links">
-          <a href="./index.html">Lobby</a>
-          <a href="./qa-lab.html">QA Lab</a>
-          <a href="./dev-studio.html">Dev Studio</a>
-          <a class="active" href="./office.html">My Office</a>
-          <a href="./fame.html">Wall of Fame</a>
+        <nav class="nav-links" aria-label="Headquarters">
+          <a href="./index.html" title="Keyboard 1">HQ</a>
+          <a href="./qa-lab.html" title="Keyboard 2">QA Lab</a>
+          <a href="./dev-studio.html" title="Keyboard 3">Dev Studio</a>
+          <a class="active" href="./office.html" title="Keyboard 4">Office</a>
+          <a href="./fame.html" title="Keyboard 5">Wall of Fame</a>
         </nav>
+        <p class="hud-status" aria-label="Engineering focus: quality, development, AI, observability">
+          <span class="on">AI online</span>
+          <span>QA</span>
+          <span>Dev</span>
+          <span>AI</span>
+          <span>Observe</span>
+        </p>
+        <button type="button" class="hud-toggle" data-motion-toggle aria-pressed="false">Reduce motion</button>
       </div>
     </header>
-    <main class="wrap room">
+    <main id="main" class="wrap room" tabindex="-1">
       <p class="kicker">My Office · Timeline</p>
       <h1 class="section-title">Experience</h1>
       <p class="section-sub">13+ years. Same facts as the original profile — told as a career walk, with Aircall as the centrepiece.</p>
@@ -89,10 +98,11 @@
       <p style="margin:28px 0 0"><a class="btn btn-ghost" href="./office.html">← Back to My Office</a></p>
     </main>
     <aside class="guide" aria-live="polite">
-      <div class="bot" aria-hidden="true">🤖</div>
+      <div class="bot" aria-hidden="true">AI</div>
       <p class="bubble" data-guide-text></p>
+      <button type="button" class="guide-close" data-guide-close aria-label="Dismiss guide">×</button>
     </aside>
   </div>
-  <script src="./guide.js"></script>
+  <script src="./js/hq.js"></script>
 </body>
 </html>

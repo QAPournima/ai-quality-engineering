@@ -3,62 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pournima HQ | AI × Software × Quality Engineering</title>
-  <meta name="description" content="Welcome to Pournima HQ — a virtual engineering office for Quality Engineering, Software Engineering and AI." />
+  <title>Pournima HQ | AI × Software Engineering × Quality Engineering</title>
+  <meta name="description" content="Pournima HQ — a virtual engineering office for AI, software engineering and quality engineering." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
-<body data-room="lobby">
+<body data-room="lobby" data-root="./">
+  <a class="skip" href="#main">Skip to content</a>
   <div class="floor">
-    <header class="nav">
-      <div class="wrap nav-inner">
+    <header class="nav hud">
+      <div class="wrap hud-inner">
         <a class="brand" href="./index.html">Pournima <span>HQ</span></a>
-        <nav class="nav-links">
-          <a class="active" href="./index.html">Lobby</a>
-          <a href="./qa-lab.html">QA Lab</a>
-          <a href="./dev-studio.html">Dev Studio</a>
-          <a href="./office.html">My Office</a>
-          <a href="./fame.html">Wall of Fame</a>
+        <nav class="nav-links" aria-label="Headquarters">
+          <a class="active" href="./index.html" title="Keyboard 1">HQ</a>
+          <a href="./qa-lab.html" title="Keyboard 2">QA Lab</a>
+          <a href="./dev-studio.html" title="Keyboard 3">Dev Studio</a>
+          <a href="./office.html" title="Keyboard 4">Office</a>
+          <a href="./fame.html" title="Keyboard 5">Wall of Fame</a>
         </nav>
+        <p class="hud-status" aria-label="Engineering focus: quality, development, AI, observability">
+          <span class="on">AI online</span>
+          <span>QA</span>
+          <span>Dev</span>
+          <span>AI</span>
+          <span>Observe</span>
+        </p>
+        <button type="button" class="hud-toggle" data-motion-toggle aria-pressed="false">Reduce motion</button>
       </div>
     </header>
-    <main class="wrap lobby">
-      <p class="kicker">Welcome to Pournima HQ</p>
-      <h1>Quality Engineering × Software Engineering × AI</h1>
-      <p class="lede">I build, test and observe software with AI as an engineering partner.</p>
+    <main id="main" class="wrap lobby" tabindex="-1">
+      <p class="kicker">Pournima HQ</p>
+      <h1>AI × Software Engineering × Quality Engineering</h1>
+      <p class="lede">I build software, engineer quality, and use AI to make both smarter.</p>
       <div class="cta">
-        <a class="btn btn-primary" href="./qa-lab.html">Enter QA Lab</a>
-        <a class="btn btn-ghost" href="./dev-studio.html">Enter Dev Studio</a>
-        <a class="btn btn-ghost" href="./office.html">Meet Pournima</a>
+        <a class="btn btn-primary" href="#map">Enter HQ</a>
+        <a class="btn btn-ghost" href="#map">Explore</a>
+        <a class="btn btn-ghost" href="./fame.html">Skip to Wall of Fame</a>
       </div>
-      <div class="building" data-parallax>
+      <p class="keys">Direct path: HUD above, or keys 1–5. You do not need the animation.</p>
+      <div class="building" id="map" data-parallax tabindex="-1">
         <div class="roof">Pournima HQ · AI × Software × Quality</div>
         <div class="doors">
           <a class="door qa" href="./qa-lab.html">
-            <span class="icon">🧪</span>
+            <span class="icon" aria-hidden="true"></span>
             <h2>QA Lab</h2>
             <p>Explore Quality Engineering</p>
           </a>
           <a class="door dev" href="./dev-studio.html">
-            <span class="icon">💻</span>
+            <span class="icon" aria-hidden="true"></span>
             <h2>Dev Studio</h2>
             <p>Explore Software Engineering</p>
           </a>
           <a class="door me" href="./office.html">
-            <span class="icon">👩‍💼</span>
-            <h2>My Office</h2>
-            <p>Meet Pournima &amp; journey</p>
+            <span class="icon" aria-hidden="true"></span>
+            <h2>Office</h2>
+            <p>Career, writing and contact</p>
           </a>
         </div>
       </div>
-      <a class="fame-link" href="./fame.html">🏆 Explore the Wall of Fame →</a>
+      <a class="fame-link" href="./fame.html">Wall of Fame — projects →</a>
     </main>
     <aside class="guide" aria-live="polite">
-      <div class="bot" aria-hidden="true">🤖</div>
+      <div class="bot" aria-hidden="true">AI</div>
       <p class="bubble" data-guide-text></p>
+      <button type="button" class="guide-close" data-guide-close aria-label="Dismiss guide">×</button>
     </aside>
   </div>
-  <script src="./guide.js"></script>
+  <script src="./js/hq.js"></script>
 </body>
 </html>

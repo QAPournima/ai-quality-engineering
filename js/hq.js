@@ -6,7 +6,9 @@
     "2": root + "qa-lab.html",
     "3": root + "dev-studio.html",
     "4": root + "office.html",
-    "5": root + "fame.html"
+    "5": root + "fame.html",
+    j: root + "journey.html",
+    J: root + "journey.html"
   };
 
   function storedMotion() {
@@ -45,7 +47,8 @@
   });
 
   var lines = {
-    lobby: "This is the HQ floor. Click a room — the write-up lives inside.",
+    lobby: "This floor is the evolution from 2010 to today. Click an era — the write-up is inside.",
+    journey: "Each era on the HQ floor opens here. HUD still jumps to the craft rooms.",
     lab: "Want to see how my AI-powered QA workflow works?",
     dev: "This is where I experiment with AI-assisted development.",
     office: "Here is my engineering journey — desk, wall, and bookshelf.",

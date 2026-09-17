@@ -1,4 +1,4 @@
-# Pournima HQ
+# Pournima T
 
 Portfolio for AI × Software Engineering × Quality Engineering.
 

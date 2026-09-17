@@ -46,36 +46,6 @@
     } catch (err) {}
   });
 
-  var lines = {
-    lobby: "This floor is the evolution from 2010 to today. Click an era — the write-up is inside.",
-    journey: "Each era on the HQ floor opens here. HUD still jumps to the craft rooms.",
-    lab: "Want to see how my AI-powered QA workflow works?",
-    dev: "This is where I experiment with AI-assisted development.",
-    office: "Here is my engineering journey — desk, wall, and bookshelf.",
-    fame: "These are projects I have built — click a piece to walk in."
-  };
-  var room = document.body.getAttribute("data-room") || "lobby";
-  var bubble = document.querySelector("[data-guide-text]");
-  var guide = document.querySelector(".guide");
-  var dismissed = false;
-  try {
-    dismissed = sessionStorage.getItem("hq-guide-off") === "1";
-  } catch (e) {}
-
-  if (guide && dismissed) {
-    guide.hidden = true;
-  } else if (bubble && lines[room]) {
-    bubble.textContent = lines[room];
-  }
-
-  document.addEventListener("click", function (e) {
-    if (!e.target.closest("[data-guide-close]")) return;
-    if (guide) guide.hidden = true;
-    try {
-      sessionStorage.setItem("hq-guide-off", "1");
-    } catch (err) {}
-  });
-
   var building = document.querySelector("[data-parallax]");
   if (building) {
     window.addEventListener("mousemove", function (e) {

@@ -4,68 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pournima HQ | How quality evolved</title>
-  <meta name="description" content="Pournima HQ — from 2010 fundamentals to AI × software × quality engineering. The definition of quality evolved with the technology, and I evolved with it." />
+  <meta name="description" content="Pournima Tele — from 2010 fundamentals to AI × software × quality engineering. The definition of quality evolved with the technology, and I evolved with it." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
-    }
-  }
-  </script>
 </head>
 <body data-room="lobby" data-root="./">
   <a class="skip" href="#main">Skip to content</a>
-  <header class="nav hud">
-    <div class="wrap hud-inner">
-      <a class="brand" href="./index.html">Pournima <span>HQ</span></a>
-      <nav class="nav-links" aria-label="Direct navigation">
-        <a class="active" href="./index.html" title="Keyboard 1">HQ</a>
-        <a href="./journey.html" title="Keyboard J">Journey</a>
-        <a href="./qa-lab.html" title="Keyboard 2">QA Lab</a>
-        <a href="./dev-studio.html" title="Keyboard 3">Dev Studio</a>
-        <a href="./office.html" title="Keyboard 4">Office</a>
-        <a href="./fame.html" title="Keyboard 5">Wall of Fame</a>
-      </nav>
-      <p class="hud-status" aria-label="Engineering focus: quality, development, AI, observability">
-        <span class="on">AI online</span>
-        <span>QA</span>
-        <span>Dev</span>
-        <span>AI</span>
-        <span>Observe</span>
-      </p>
-      <button type="button" class="hud-toggle" data-motion-toggle aria-pressed="false">Reduce motion</button>
-    </div>
-  </header>
-  <main id="main" class="world-shell" tabindex="-1">
-    <div id="world-stage" hidden>
-      <canvas id="hq-canvas" aria-label="Evolution path from 2010 foundations to AI engineering"></canvas>
-      <div class="world-labels" hidden>
-        <button type="button" data-go="foundations">2010 · Foundations</button>
-        <button type="button" data-go="automation">Automation</button>
-        <button type="button" data-go="systems">Mobile + APIs</button>
-        <button type="button" data-go="qe">Quality engineering</button>
-        <button type="button" data-go="ai">AI engineering</button>
-        <button type="button" data-go="today">Today</button>
+  <div class="floor">
+    <header class="nav">
+      <div class="wrap hud-inner">
+        <a class="brand" href="./index.html">Pournima <span>HQ</span></a>
+        <nav class="nav-links" aria-label="Site">
+          <a class="active" href="./index.html">HQ</a>
+          <a href="./journey.html">Journey</a>
+          <a href="./qa-lab.html">QA Lab</a>
+          <a href="./dev-studio.html">Dev Studio</a>
+          <a href="./office.html">Office</a>
+          <a href="./fame.html">Wall of Fame</a>
+        </nav>
       </div>
-    </div>
-    <div class="intro wrap">
-      <p class="kicker">Pournima HQ · 2010 → today</p>
-      <h1>The definition of quality evolved with the technology, and I evolved with it.</h1>
-      <p class="lede">AI × Software Engineering × Quality Engineering. Walk the floor — each era opens the write-up. HUD skips the world.</p>
-      <div class="cta">
-        <a class="btn btn-primary" href="#path" data-enter-world>Walk the path</a>
-        <a class="btn btn-ghost" href="./journey.html" data-skip-world>Open the HTML journey</a>
-        <a class="btn btn-ghost" href="./fame.html">Wall of Fame</a>
+    </header>
+    <main id="main" class="wrap lobby-main" tabindex="-1">
+      <div class="intro">
+        <p class="kicker">Pournima Tele · 2010 → today</p>
+        <h1>The definition of quality evolved with the technology, and I evolved with it.</h1>
+        <p class="lede">AI × Software Engineering × Quality Engineering. 13+ years employed. Career started in 2010.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="./journey.html">How quality evolved</a>
+          <a class="btn btn-ghost" href="./fame.html">Wall of Fame</a>
+          <a class="btn btn-ghost" href="./work.html">Timeline</a>
+        </div>
       </div>
-    </div>
-    <div id="html-map" class="wrap path-fallback">
-      <p id="path" class="kicker">Direct path</p>
-      <h2 class="section-title">How quality evolved</h2>
-      <p class="section-sub">Same story as the 3D floor. Use this when WebGL is off, on a phone, or if you want the essay immediately.</p>
+      <p class="kicker" style="margin-top:36px">The path</p>
+      <h2 class="section-title">From fundamentals to today</h2>
+      <p class="section-sub">Each era is one chapter of the same career — not a restart.</p>
       <div class="era-doors">
         <a class="door me" href="./journey.html#foundations"><h2>2010</h2><p>Fundamentals · Wipro / BT</p></a>
         <a class="door" href="./journey.html#automation"><h2>Automation</h2><p>Repeatable feedback</p></a>
@@ -74,27 +47,9 @@
         <a class="door dev" href="./journey.html#ai"><h2>AI</h2><p>Partner, not generator</p></a>
         <a class="door me" href="./journey.html#today"><h2>Today</h2><p>AI × Software × Quality</p></a>
       </div>
-      <p class="keys">Craft rooms (same facts, different lens): <a href="./qa-lab.html">QA Lab</a> · <a href="./dev-studio.html">Dev Studio</a> · <a href="./office.html">Office</a> · <a href="./fame.html">Wall of Fame</a></p>
-    </div>
-  </main>
-  <aside class="guide" aria-live="polite">
-    <div class="bot" aria-hidden="true">AI</div>
-    <p class="bubble" data-guide-text></p>
-    <button type="button" class="guide-close" data-guide-close aria-label="Dismiss guide">×</button>
-  </aside>
+      <p class="section-sub" style="margin: 8px 0 28px">More detail by craft: <a href="./qa-lab.html">QA Lab</a> · <a href="./dev-studio.html">Dev Studio</a> · <a href="./office.html">Office</a> · <a href="./fame.html">Wall of Fame</a></p>
+    </main>
+  </div>
   <script src="./js/hq.js"></script>
-  <script type="module">
-    var wide = window.matchMedia("(min-width: 861px)").matches;
-    var skip = false;
-    try { skip = sessionStorage.getItem("hq-world") === "off"; } catch (e) {}
-    var gl = false;
-    try {
-      var c = document.createElement("canvas");
-      gl = !!(c.getContext("webgl2") || c.getContext("webgl"));
-    } catch (e) {}
-    if (wide && gl && !skip) {
-      import("./js/world/atrium.js").catch(function () {});
-    }
-  </script>
 </body>
 </html>

@@ -106,4 +106,31 @@
       window.location.href = routes[e.key];
     }
   });
+
+  if (!document.querySelector(".mouse-spot")) {
+    var spotEl = document.createElement("div");
+    spotEl.className = "mouse-spot";
+    spotEl.setAttribute("aria-hidden", "true");
+    document.body.prepend(spotEl);
+  }
+  var spot = document.querySelector(".mouse-spot");
+  var cards = ".door, .card, .frame";
+  window.addEventListener("pointermove", function (e) {
+    if (html.getAttribute("data-motion") === "reduce") {
+      spot.style.opacity = "0";
+      return;
+    }
+    spot.style.opacity = "1";
+    spot.style.background =
+      "radial-gradient(600px circle at " +
+      e.clientX +
+      "px " +
+      e.clientY +
+        "px, color-mix(in srgb, var(--tone) 26%, transparent), transparent 80%)";
+    var card = e.target.closest(cards);
+    if (!card) return;
+    var r = card.getBoundingClientRect();
+    card.style.setProperty("--lx", e.clientX - r.left + "px");
+    card.style.setProperty("--ly", e.clientY - r.top + "px");
+  }, { passive: true });
 })();

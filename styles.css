@@ -322,8 +322,51 @@ h1 { margin: 0; font-size: clamp(36px, 6vw, 64px); letter-spacing: -0.04em; line
   box-shadow: 0 0 16px color-mix(in srgb, var(--door, var(--gold)) 40%, transparent);
   margin-bottom: auto;
 }
-.door h2 { margin: 0; font-size: 22px; }
-.door p { margin: 0; color: var(--muted); font-size: 14px; }
+.mouse-spot {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 8;
+  transition: background 0.3s ease, opacity 0.3s ease;
+}
+@media (max-width: 860px) {
+  .mouse-spot,
+  .door::after,
+  .card::after,
+  .frame::after {
+    display: none;
+  }
+}
+html[data-motion="reduce"] .mouse-spot,
+html[data-motion="reduce"] .door::after,
+html[data-motion="reduce"] .card::after,
+html[data-motion="reduce"] .frame::after {
+  display: none;
+}
+.door, .card, .frame {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.door > *, .card > *, .frame > * { position: relative; z-index: 1; }
+.door::after, .card::after, .frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 0;
+  background: radial-gradient(
+    220px circle at var(--lx, 50%) var(--ly, 50%),
+    color-mix(in srgb, var(--door, var(--tone)) 32%, transparent),
+    transparent 72%
+  );
+  transition: opacity 0.25s ease;
+}
+.door:hover::after, .card:hover::after, .frame:hover::after,
+.door:focus-visible::after, .card:focus-visible::after, .frame:focus-visible::after {
+  opacity: 1;
+}
 .fame-link {
   display: inline-block;
   margin-top: 22px;

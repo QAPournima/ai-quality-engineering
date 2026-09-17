@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wall of Fame | Pournima HQ</title>
+  <title>Projects | Pournima HQ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body data-room="fame" data-root="./">
+  <div class="mouse-spot" aria-hidden="true"></div>
   <a class="skip" href="#main">Skip to content</a>
   <div class="floor">
     <header class="nav hud">
@@ -20,7 +21,7 @@
           <a href="./qa-lab.html" title="Keyboard 2">QA Lab</a>
           <a href="./dev-studio.html" title="Keyboard 3">Dev Studio</a>
           <a href="./office.html" title="Keyboard 4">Office</a>
-          <a class="active" href="./fame.html" title="Keyboard 5">Wall of Fame</a>
+          <a class="active" href="./fame.html" title="Keyboard 5">Projects</a>
         </nav>
         <p class="hud-status" aria-label="Engineering focus: quality, development, AI, observability">
           <span class="on">AI online</span>
@@ -33,9 +34,9 @@
       </div>
     </header>
     <main id="main" class="wrap room" tabindex="-1">
-      <p class="kicker">Corridor</p>
-      <h1 class="section-title">Wall of Fame</h1>
-      <p class="section-sub">Framed work. Hover to light a piece. Click to walk in.</p>
+      <p class="kicker">My work</p>
+      <h1 class="section-title">Projects</h1>
+      <p class="section-sub">Selected systems. Hover to light a piece. Click to open it.</p>
       <div class="wall">
         <a class="frame" href="./projects/ai-qa.html">
           <img src="./assets/ai-testing-platform.png" alt="" />
@@ -75,6 +76,6 @@
       <button type="button" class="guide-close" data-guide-close aria-label="Dismiss guide">×</button>
     </aside>
   </div>
-  <script src="./js/hq.js"></script>
+  <script src="./js/hq.js?v=spot"></script>
 </body>
 </html>

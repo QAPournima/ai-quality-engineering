@@ -52,7 +52,7 @@
     lab: "Want to see how my AI-powered QA workflow works?",
     dev: "This is where I experiment with AI-assisted development.",
     office: "Here is my engineering journey — desk, wall, and bookshelf.",
-    fame: "These are some of the systems I have built."
+    fame: "These are projects I have built — click a piece to walk in."
   };
   var room = document.body.getAttribute("data-room") || "lobby";
   var bubble = document.querySelector("[data-guide-text]");
@@ -114,7 +114,7 @@
     document.body.prepend(spotEl);
   }
   var spot = document.querySelector(".mouse-spot");
-  var cards = ".door, .card, .frame";
+  var cards = ".door, .card, .frame, .panel, .hotspot";
   window.addEventListener("pointermove", function (e) {
     if (html.getAttribute("data-motion") === "reduce") {
       spot.style.opacity = "0";

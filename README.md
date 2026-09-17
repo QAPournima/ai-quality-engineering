@@ -2,7 +2,7 @@
 
 Portfolio for AI × Software Engineering × Quality Engineering.
 
-Start with [How quality evolved](./journey.html). Also: [QA Lab](./qa-lab.html) · [Dev Studio](./dev-studio.html) · [Office](./office.html) · [Wall of Fame](./fame.html)
+Start with [How quality evolved](./journey.html). Also: [QA Lab](./qa-lab.html) · [Dev Studio](./dev-studio.html) · [Office](./office.html) · [Projects](./fame.html)
 
 Live: [qapournima.github.io/ai-quality-engineering](https://qapournima.github.io/ai-quality-engineering/)
 

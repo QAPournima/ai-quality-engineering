@@ -333,23 +333,27 @@ h1 { margin: 0; font-size: clamp(36px, 6vw, 64px); letter-spacing: -0.04em; line
   .mouse-spot,
   .door::after,
   .card::after,
-  .frame::after {
+  .frame::after,
+  .panel::after,
+  .hotspot::after {
     display: none;
   }
 }
 html[data-motion="reduce"] .mouse-spot,
 html[data-motion="reduce"] .door::after,
 html[data-motion="reduce"] .card::after,
-html[data-motion="reduce"] .frame::after {
+html[data-motion="reduce"] .frame::after,
+html[data-motion="reduce"] .panel::after,
+html[data-motion="reduce"] .hotspot::after {
   display: none;
 }
-.door, .card, .frame {
+.door, .card, .frame, .panel, .hotspot {
   position: relative;
   overflow: hidden;
   isolation: isolate;
 }
-.door > *, .card > *, .frame > * { position: relative; z-index: 1; }
-.door::after, .card::after, .frame::after {
+.door > *, .card > *, .frame > *, .panel > *, .hotspot > * { position: relative; z-index: 1; }
+.door::after, .card::after, .frame::after, .panel::after, .hotspot::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -363,8 +367,8 @@ html[data-motion="reduce"] .frame::after {
   );
   transition: opacity 0.25s ease;
 }
-.door:hover::after, .card:hover::after, .frame:hover::after,
-.door:focus-visible::after, .card:focus-visible::after, .frame:focus-visible::after {
+.door:hover::after, .card:hover::after, .frame:hover::after, .panel:hover::after, .hotspot:hover::after,
+.door:focus-visible::after, .card:focus-visible::after, .frame:focus-visible::after, .panel:focus-visible::after, .hotspot:focus-visible::after {
   opacity: 1;
 }
 .fame-link {

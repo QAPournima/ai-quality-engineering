@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body data-room="fame" data-root="../">
+  <div class="mouse-spot" aria-hidden="true"></div>
   <a class="skip" href="#main">Skip to content</a>
   <div class="floor">
     <header class="nav hud">
@@ -20,7 +21,7 @@
           <a href="../qa-lab.html" title="Keyboard 2">QA Lab</a>
           <a href="../dev-studio.html" title="Keyboard 3">Dev Studio</a>
           <a href="../office.html" title="Keyboard 4">Office</a>
-          <a class="active" href="../fame.html" title="Keyboard 5">Wall of Fame</a>
+          <a class="active" href="../fame.html" title="Keyboard 5">Projects</a>
         </nav>
         <p class="hud-status" aria-label="Engineering focus: quality, development, AI, observability">
           <span class="on">AI online</span>
@@ -33,7 +34,7 @@
       </div>
     </header>
     <main id="main" class="wrap room case" tabindex="-1">
-      <p class="kicker">Wall of Fame · Case study</p>
+      <p class="kicker">Projects · Case study</p>
       <h1 class="section-title">AI QA Test Agent</h1>
       <p class="section-sub">Requirement-driven testing: Jira → AI reasoning → browser interaction → evidence → failure analysis.</p>
       <pre class="terminal" style="margin-top:22px">╭──────────────────────────────────────╮
@@ -87,7 +88,7 @@
       </article>
       <p style="margin-top:24px">
         <a class="btn btn-primary" href="https://github.com/QAPournima/Zap-Prototype">View Zap-Prototype on GitHub</a>
-        <a class="btn btn-ghost" href="../fame.html">Back to Wall of Fame</a>
+        <a class="btn btn-ghost" href="../fame.html">Back to Projects</a>
       </p>
     </main>
     <aside class="guide" aria-live="polite">
@@ -96,6 +97,6 @@
       <button type="button" class="guide-close" data-guide-close aria-label="Dismiss guide">×</button>
     </aside>
   </div>
-  <script src="../js/hq.js"></script>
+  <script src="../js/hq.js?v=spot"></script>
 </body>
 </html>

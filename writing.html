@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Writing | Pournima T</title>
+  <meta name="description" content="QA, AI-driven testing and engineering practice — articles on Medium and Wix." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body id="top" data-room="office" data-root="./">
+  <div class="mouse-spot" aria-hidden="true"></div>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="floor">
+    <header class="nav hud">
+      <div class="wrap hud-inner">
+        <a class="brand" href="https://qapournima.github.io/qa-dev/">Pournima <span>T</span></a>
+        <nav class="nav-links" aria-label="Site">
+          <a href="https://qapournima.github.io/qa-dev/" title="Keyboard 1">QA × Dev</a>
+          <a href="./journey.html" title="Keyboard J">Journey</a>
+          <a href="./qa-lab.html" title="Keyboard 2">QA Lab</a>
+          <a href="./dev-studio.html" title="Keyboard 3">Dev Studio</a>
+          <a href="./office.html" title="Keyboard 4">Office</a>
+          <a href="./fame.html" title="Keyboard 5">Projects</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="wrap room" tabindex="-1">
+      <p class="kicker">Office · Bookshelf</p>
+      <h1 class="section-title">Writing</h1>
+      <p class="section-sub">QA, AI-driven testing and engineering practice on Medium and Wix. Open a card to read the full piece.</p>
+      <p class="kicker" style="margin-top:36px">Wix</p>
+      <div class="write-grid" id="wix"></div>
+      <p class="kicker">Medium</p>
+      <div class="write-grid" id="medium"></div>
+    </main>
+  </div>
+  <footer class="site-foot">
+    <a class="to-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="foot-inner wrap">
+      <p>© 2026 Pournima Tele</p>
+      <nav aria-label="Footer">
+        <a href="https://qapournima.github.io/qa-dev/">QA × Dev</a>
+        <a href="./office.html">Office</a>
+        <a href="./writing.html">Writing</a>
+        <a href="./books.html">Books</a>
+        <a href="./fame.html">Projects</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="./js/hq.js?v=noguide"></script>
+  <script>
+    function esc(s) {
+      return String(s || "").replace(/[&<>"']/g, function (c) {
+        return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c];
+      });
+    }
+    function renderCards(list, posts, sourceLabel) {
+      posts.forEach(function (post) {
+        var a = document.createElement("a");
+        a.className = "write-card";
+        a.href = post.url;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        var initial = (post.title || "A").replace(/^[^\w]+/, "").charAt(0).toUpperCase() || "A";
+        var thumb = post.image
+          ? '<img src="' + esc(post.image) + '" alt="" /><div class="fallback" hidden>' + esc(initial) + "</div>"
+          : '<div class="fallback">' + esc(initial) + "</div>";
+        a.innerHTML =
+          '<div class="thumb">' + thumb + "</div>" +
+          '<div class="body">' +
+          '<p class="meta">' + sourceLabel + (post.displayDate ? " · " + esc(post.displayDate) : "") + "</p>" +
+          "<h3>" + esc(post.title) + "</h3>" +
+          "<p>" + esc(post.excerpt || "") + "</p>" +
+          "</div>";
+        list.appendChild(a);
+        var img = a.querySelector("img");
+        if (img) {
+          img.addEventListener("error", function () {
+            img.style.display = "none";
+            var fb = a.querySelector(".fallback");
+            if (fb) fb.hidden = false;
+          });
+        }
+      });
+    }
+    var medium = [
+      {
+        title: "The Role of QA in an Agile Scrum Team",
+        url: "https://medium.com/@qapournima/the-role-of-qa-in-an-agile-scrum-team-navigating-the-product-life-cycle-02fdffd3c4f1",
+        excerpt: "How QA navigates the product life cycle inside Scrum.",
+        displayDate: "10 Jan 2025",
+        image: "https://static.wixstatic.com/media/cbe8c3_9dba09dfed6d4073ac436e6482601a19~mv2.png/v1/fit/w_1000,h_800,al_c,q_80/file.png"
+      },
+      {
+        title: "Understanding Shift-Left Testing",
+        url: "https://medium.com/@qapournima/understanding-shift-left-testing-a-comprehensive-guide-92a62360edb1",
+        excerpt: "A practical guide to finding issues earlier.",
+        displayDate: "20 Feb 2025",
+        image: "https://static.wixstatic.com/media/78d045_634fe225a107441ca6a9ddfc58bd28f9~mv2.jpg/v1/fit/w_1000,h_1000,al_c,q_80/file.png"
+      },
+      {
+        title: "AI-Driven Testing",
+        url: "https://medium.com/@qapournima/ai-driven-testing-revolutionizing-software-testing-with-automation-and-efficiency-4b5308362560",
+        excerpt: "Using automation and AI to test faster without losing quality.",
+        displayDate: "13 Mar 2025",
+        image: "https://cdn-images-1.medium.com/max/1024/0*acQxGvFklry1MdLl"
+      },
+      {
+        title: "Breaking Silos in Agile Teams",
+        url: "https://medium.com/@qapournima/breaking-silos-in-agile-teams-fostering-collaboration-and-alignment-863f5aea3f2c",
+        excerpt: "Collaboration and alignment across engineering and QA.",
+        displayDate: "Medium",
+        image: ""
+      }
+    ];
+    renderCards(document.getElementById("medium"), medium, "Medium");
+    fetch("./writing/catalog.json")
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        renderCards(
+          document.getElementById("wix"),
+          (data.posts || []).filter(function (post) { return post.source !== "medium"; }),
+          "Wix"
+        );
+      });
+  </script>
+</body>
+</html>

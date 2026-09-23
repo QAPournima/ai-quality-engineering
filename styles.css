@@ -507,6 +507,67 @@ html[data-motion="reduce"] .hotspot::after {
 }
 .book-row { display: flex; gap: 16px; align-items: center; }
 .book-row img { width: 90px; border-radius: 6px; }
+.write-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0 28px;
+}
+.write-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.write-card:hover, .write-card:focus-visible {
+  border-color: color-mix(in srgb, var(--tone) 50%, white);
+}
+.write-card .thumb {
+  height: 140px;
+  background: #151922;
+  overflow: hidden;
+}
+.write-card .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.write-card .thumb .fallback {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--tone);
+}
+.write-card .thumb .fallback[hidden] { display: none; }
+.write-card .body { padding: 14px; }
+.write-card .meta {
+  margin-bottom: 8px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tone);
+}
+.write-card h3 { margin: 0 0 8px; font-size: 15px; line-height: 1.35; }
+.write-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.book-hero {
+  display: grid;
+  grid-template-columns: 168px minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+}
+.book-hero img {
+  width: 168px;
+  border-radius: 8px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
 .guide {
   position: fixed;
   left: 16px;
@@ -708,7 +769,8 @@ body[data-room="lobby"] .guide {
 .aircall-head h3 { margin: 0; }
 .aircall-head p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
 @media (max-width: 860px) {
-  .doors, .stations, .wall, .grid-3, .start-steps { grid-template-columns: 1fr; }
+  .doors, .stations, .wall, .grid-3, .start-steps, .write-grid { grid-template-columns: 1fr; }
+  .book-hero { grid-template-columns: 1fr; }
   .grid-2, .desk, .job { grid-template-columns: 1fr; }
   .door { min-height: 180px; }
   .phone { margin: 0 auto; }

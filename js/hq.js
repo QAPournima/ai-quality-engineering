@@ -2,7 +2,7 @@
   var html = document.documentElement;
   var root = document.body.getAttribute("data-root") || "./";
   var routes = {
-    "1": root + "index.html",
+    "1": "https://qapournima.github.io/qa-dev/",
     "2": root + "qa-lab.html",
     "3": root + "dev-studio.html",
     "4": root + "office.html",

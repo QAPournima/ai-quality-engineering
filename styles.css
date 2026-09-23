@@ -384,6 +384,37 @@ html[data-motion="reduce"] .hotspot::after {
 .room { padding: 36px 0 90px; }
 .section-title { margin: 0 0 8px; font-size: 34px; letter-spacing: -0.03em; }
 .section-sub { color: var(--muted); max-width: 680px; line-height: 1.55; }
+.start { margin: 40px 0 8px; text-align: left; }
+.start .section-sub { margin: 0 0 18px; max-width: 720px; }
+.start-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.start-step {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+}
+.start-step .when {
+  margin: 0 0 6px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--tone);
+}
+.start-step h3 { margin: 0 0 8px; font-size: 18px; }
+.start-step ul {
+  margin: 0;
+  padding-left: 16px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.start-step li { margin: 6px 0; }
 .grid, .grid-2, .grid-3, .stations {
   display: grid;
   gap: 12px;
@@ -677,7 +708,7 @@ body[data-room="lobby"] .guide {
 .aircall-head h3 { margin: 0; }
 .aircall-head p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
 @media (max-width: 860px) {
-  .doors, .stations, .wall, .grid-3 { grid-template-columns: 1fr; }
+  .doors, .stations, .wall, .grid-3, .start-steps { grid-template-columns: 1fr; }
   .grid-2, .desk, .job { grid-template-columns: 1fr; }
   .door { min-height: 180px; }
   .phone { margin: 0 auto; }
